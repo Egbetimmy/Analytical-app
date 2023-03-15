@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+label, input[type="submit"] {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
