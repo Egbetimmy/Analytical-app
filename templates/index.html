@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Uploading & Reading CSV file</title>
+    <title>File Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <form method = "POST" enctype="multipart/form-data" action = "/">
-        <input type="file" name="file" accept=".csv">
-        <input type = "submit" value="Upload">
+    <h1>File Upload</h1>
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose a file:</label>
+        <input type="file" name="file" id="file">
+        <br>
+        <input type="submit" value="Upload">
     </form>
-    <p style="color:blue;">Choose csv file to upload</p>
-  <form action="/show_data" target="_blank">
-        <input type="submit" value="Show CSV"/>
-    </form>
+    {% if file %}
+    <h2>File uploaded successfully!</h2>
+    <p>Filename: {{ file.filename }}</p>
+    {% endif %}
 </body>
 </html>
